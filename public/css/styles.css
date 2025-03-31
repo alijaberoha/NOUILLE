@@ -155,4 +155,675 @@ color: hsla(233, 85%, 8%, 0.426);
     font-size: 25px;
     color: #0a041585;
   }
+  #services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+#services h2{
+    color: #3e1172;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    margin: 0;
+}
+#services img{
+    height: 50px;
+    width: 120px;
+}
+.s-container{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+   gap: 20px;
+   align-items: center;
+   text-align: center;
+   margin-top:4vh;
+   
+}
+.services{
+    border: 1px solid rgba(0, 0, 0, 0.207);
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.services:hover {
+    transform: translateY(-10px) scale(1.05) rotateX(2deg) rotateY(1deg);
+    box-shadow: 0 12px 24px rgba(127, 61, 240, 0.25);
+  }
   
+.services p{
+    font-weight: 1000;
+    font-family: "Baloo 2"; 
+    color: #695AA6;
+    font-size: 1vw;
+}
+.portfoliotitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.portfolio-grid img {
+    height: 45vh;
+}
+
+.portfolio-item {
+    position: relative;          /* Position relative pour les éléments enfants */
+    overflow: hidden;           
+    width: 380px;
+    height: 380px;
+}
+
+.portfolio-item img {
+    display: block;
+    object-fit: cover;          /* Prend la taille de tout le contenair */
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio-grid{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+
+.portfolio-item::before {       /* on crée un element before et le contenu peut pas etre vide donc on met none */
+    content: none;
+}
+
+
+.portfolio-overlay {
+    position: absolute;        /* On met une position qui bouge pas par rapport au parent pour l'animation */
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); 
+    width: 100%;
+    height: 100%;
+    background-color: rgba(105, 90, 166, 0.264);  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;                /* Opacité 0 pour qu'il soit invisible au depart */      
+    transition: transform 0.5s ease, opacity 0.5s ease;  
+    text-align: center;
+}
+
+
+
+.portfolio-overlay h3 {
+    transform: scale(0);       
+    transition: transform 0.5s ease;
+    font-family: "Baloo 2";
+    color: #695aa6;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.portfolio-overlay p {
+    font-size: 16px;
+    color: rgb(20, 1, 1);
+    opacity: 0;                
+    transition: opacity 0.5s ease 0.2s;  
+    font-family: "Noto Sans JP";
+}
+
+/* Effets au survol */
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;              /* L'opacité passe a 1 pour qu'il apparaissent TADA! */
+    transform: translate(-50%, -50%) scale(1);      /* La taille passe a 1 */
+}
+
+.portfolio-item:hover .portfolio-overlay h3 {
+    transform: scale(1);     
+}
+
+.portfolio-item:hover .portfolio-overlay p {
+    opacity: 1;                
+}
+
+.portfolio-item:hover img {
+    opacity: 0.5;              
+}
+.portfoliotitle h2{
+    color: #3e1172;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+  }
+  .Pricing button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    background-color: #3e1172;
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(62, 17, 114, 0.3);
+  }
+  
+  .Pricing button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+    transition: all 0.5s ease;
+  }
+  
+  .Pricing button:hover::before {
+    left: 100%;
+  }
+  
+  .Pricing button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 18px rgba(62, 17, 114, 0.5);
+  }
+  
+.Pricing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.Pricing div{
+    display: flex;
+}
+.Pricing img{
+    width: 100px;
+}
+#Free, #Basic, #Premium {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    border: 1px solid grey;
+    padding: 30px;
+    width: 250px;
+}
+#fusé{
+    width: 70px;
+    padding:15px;
+}
+#X{
+    color: red;
+}
+#p1Pricing{
+    font-family: "Noto Sans JP", sans-serif;
+    margin-top: 100px;
+}
+#p2Pricing{
+    color: #3e1172;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 1;
+}
+.Pricing h4{
+    font-family: "Black Han Sans", sans-serif;
+    color: rgb(112,92,164);
+    font-size: 25px;
+}
+.Pricing h3{
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 30px;
+}
+/* Hire */
+.Hire{
+    margin-top: 50px;
+    background-color:rgb(112,92,164);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 120px;
+}
+.Hire h5{
+    font-family: "Black Han Sans", sans-serif;
+    color: white;
+    font-family: 10px;
+    margin-bottom: 0px;
+}
+.Hire p{
+    font-family: "Noto Sans JP", sans-serif;
+    color: white;
+    margin-top: 0px;
+}
+.Hire button{
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    background-color: white;
+    color: #3e1172;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(62, 17, 114, 0.3);
+}
+.Hire button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+    transition: all 0.5s ease;
+  }
+  
+  .Hire button:hover::before {
+    left: 100%;
+  }
+  
+  .Hire button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 18px rgba(62, 17, 114, 0.5);
+  }
+.Testimonial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+    background-color: white;
+}
+.Testimonial div{
+    display: flex;
+    gap: 50px;
+}
+.Testimonial div div{
+    border: 1px solid rgba(128, 128, 128, 0.311);
+    display: flex;
+    flex-direction: column;
+}
+.Testimonial div div p{
+    margin-bottom: 0px;
+    box-sizing: border-box; 
+    padding: 20px 70px;
+}
+.Testimonial img{
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px white solid;
+    transform: translate(-50%, 40%);;
+      
+    /* transform: translateZ(50%); */
+}
+.Testimonial p{
+    font-family: "Noto Sans JP", sans-serif;
+}
+.Testimonial h3{
+    font-family: "Black Han Sans", sans-serif;
+    color: rgb(112,92,164);
+    font-size: 25px;
+}
+.Testimonial div div span{
+    /* margin: 0px; */
+    font-family: "Black Han Sans", sans-serif;
+    color: rgb(112,92,164);
+    font-size: 15px;
+    letter-spacing: 0px;
+    /* text-align: center; */
+}
+.Blog p{
+    font-family: "Noto Sans JP", sans-serif;
+}
+.Blog h3{
+    font-family: "Black Han Sans", sans-serif;
+    color: rgb(112,92,164);
+    font-size: 20px;
+}
+.Blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+}
+.Blog img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+#BlogDiv1{
+    align-items: center;
+    display: flex;
+    height: 300px;
+    border: 1px rgb(199, 199, 199) solid;
+    width: 1100px;
+    gap: 20px;
+}
+/* #BlogDiv1 p{
+ padding-top: 10px;
+ padding-bottom: 10px;
+} */
+#BlogDiv2{
+    align-items: center;
+    display: flex;
+    height: 300px;
+    border: 1px rgb(199, 199, 199) solid;
+    width: 1100px;
+    gap: 20px;
+}
+#BlogDiv1 div{
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+    
+}
+#BlogDiv2 div{
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+}
+.Blog p{
+    font-size: 15px;
+    margin: 0px;
+}
+#SpanBlog{
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+#BlogDivs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#titreBlog{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(112,92,164);
+}
+#ReadSpan{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(112,92,164);
+    font-size: 15px;
+}
+#spangrey{
+    font-family: "Noto Sans JP", sans-serif;
+    color: grey;
+}
+#BlogDivs p{
+    font-family: "Noto Sans JP", sans-serif;
+}
+#coeur{
+    color: red;
+    }
+    #contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .message { 
+        border: 1px solid #865aa6;
+        background-color: white;
+        color: #695AA6;
+        height: 40px;
+        
+        border-radius: 8px;
+        padding: 0 15px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(134, 90, 166, 0.1);
+        outline: none;
+        margin-top: 3vh;
+        margin-bottom: 13vh;
+      }
+      
+      .message:hover {
+        border-color: #7f3df0;
+        box-shadow: 0 4px 12px rgba(127, 61, 240, 0.2);
+        color:white ;
+        background-color:#7f3df0 ;  
+    }
+      
+      .message:focus {
+        border-color: #7f3df0;
+        box-shadow: 0 0 0 2px rgba(127, 61, 240, 0.2);
+      }
+      .msg {
+  margin-top: 5vh;
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  background-color: #faf8ff;
+  border: 1px solid rgba(105, 90, 166, 0.4);
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #3e1172;
+  transition: all 0.3s ease;
+  resize: vertical;
+  box-shadow: 0 2px 6px rgba(105, 90, 166, 0.1);
+  outline: none;
+}
+
+.msg:hover {
+  border-color: #7f3df0;
+  box-shadow: 0 4px 12px rgba(127, 61, 240, 0.2);
+}
+
+.msg:focus {
+  border-color: #7f3df0;
+  box-shadow: 0 0 0 2px rgba(127, 61, 240, 0.2);
+}
+
+      
+    /* FOOTER */
+    footer{
+        display: flex;
+        border-top: 1px solid rgba(0, 0, 0, 0.104);
+        justify-content: space-between;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        padding-right:8vw ;
+        padding-left: 8vw;
+    }
+    /* LOGO FONT AWESOME */
+    .reso-container{
+        display: flex;
+        flex-direction: row;
+        gap: 0.3vw;
+    }
+    .copy{
+        color: gray;
+    }
+    /* FONT AWESOME STYLE */
+    .logo{
+        color: rgba(0, 0, 0, 0.533);
+        border: 1px solid black;
+        border-radius: 50%;
+        padding:10px;
+    }
+    .logo:hover{
+        opacity: 0.3;
+    }
+    @media screen and (max-width: 768px) {
+        .navbar {
+          height: 400px;
+        }
+      
+        .SOTITLE,
+        .title,
+        .ptititre {
+          font-size: 24px;
+          top: initial;
+          transform: none;
+          position: static;
+          text-align: center;
+          margin-top: 20px;
+        }
+      
+        .btn-work {
+          position: static;
+          margin: 20px auto;
+          display: block;
+          
+          width: 150px;
+        }
+      
+        #about {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      
+        #about img {
+          width: 80%;
+          height: auto;
+        }
+      
+        #about p {
+          font-size: 16px;
+          padding: 0 20px;
+        }
+      
+        .s-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .services {
+          width: 80%;
+          padding: 40px 20px;
+        }
+      
+        .portfolio-grid {
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .portfolio-item {
+          width: 90%;
+          height: auto;
+        }
+      
+        .Pricing div {
+          flex-direction: column;
+          align-items: center;
+    
+        }
+      
+        #Free, #Basic, #Premium {
+          width: 80%;
+          margin-bottom: 20px;
+        }
+      
+        .Hire {
+          flex-direction: column;
+          text-align: center;
+          height: auto;
+          padding: 20px;
+          margin: 80px;
+        }
+        .Testimonial {
+            margin: 250px;
+        }
+        .Testimonial div {
+          flex-direction: column;
+          align-items: center;
+          margin: 5px;
+        }
+        .Testimonial img{
+            height: 50px;
+            border-radius: 50%;
+            left: 20%;
+            position: absolute;
+            border: 2px white solid;
+            transform: translate(-50%, 40%);;
+              
+            /* transform: translateZ(50%); */
+        }
+        .Blog{
+            margin: 100px;
+        }
+        #BlogDiv1,
+        #BlogDiv2 {
+          flex-direction: column;
+          width: 90%;
+          height: auto;
+          padding: 20px;
+          margin-top: 100px;
+        }
+      
+        .Blog img {
+          width: 100%;
+          height: auto;
+        }
+      
+        footer {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          padding: 20px;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+        }
+      
+        .title {
+          font-size: 48px;
+        }
+      
+        .ptititre {
+          font-size: 18px;
+        }
+      
+        #about p {
+          font-size: 18px;
+        }
+      
+        .services {
+          padding: 50px 30px;
+        }
+      
+        .portfolio-item {
+          width: 90%;
+        }
+      
+        #BlogDiv1,
+        #BlogDiv2 {
+          width: 95%;
+        }
+      
+        #Free, #Basic, #Premium {
+          width: 90%;
+        }
+      }
+      

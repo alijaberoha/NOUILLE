@@ -3,13 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Page avec nav</title>
+
+  <!-- Lien vers le fichier CSS personnalisé -->
   <link rel="stylesheet" href="public/css/styles.css">
-  
+
+  <!-- Lien CDN vers Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
+  <!-- Barre de navigation -->
   <nav class="navbar">
     <ul class="nav-links">
+      <!-- Liens de navigation -->
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Portfolio</a></li>
@@ -17,27 +24,238 @@
       <li><a href="#">Blog</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
+
+    <!-- Titres de la bannière -->
     <h2 class="SOTITLE">HI !</h2>
     <h1 class="title">I am Ze <br> Barber</h1>
     <h3 class="ptititre">FRONTED WEB DESIGNER</h3>
+
+    <!-- Bouton "Visit My Works" -->
     <a href="#" class="btn-work">Visit My Works</a>
   </nav>
-<section id = "about">
+
+  <!-- Section About -->
+  <section id="about">
     <div class="man">
-        <img src="public/images/man.png" alt="">
+      <!-- Image de présentation -->
+      <img src="public/images/man.png" alt="">
     </div>
+
     <div class="paragraphe">
-        <h3>Who Am I ?</h3>
-        <h1>About Me</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aliquid ad provident <br>
-            aut fuga animi soluta quae eos non cupiditate voluptates dolorem, doloremque quos dicta <br>
-            quibusdam impedit iure nemo a iste <br>
-            culpa! Quasi quibusdam hic recusandae delectus velit officiis explicabo voluptatibus! Nemo <br>
-            esse similique, voluptates labore distinctio, placeat explicabo facilis molestias, blanditiis <br>
-            culpa iusto voluptatem ratione eligendi a, quia temporibus velit vero ipsa sint ex voluptatum <br>
-            expedita aliquid! Debitis, nam!</p>
-            <a href="#" class="CV">Download CV</a>
+      <h3>Who Am I ?</h3>
+      <h1>About Me</h1>
+
+      <!-- Texte de présentation -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+
+      <!-- Bouton pour télécharger le CV -->
+      <a href="#" class="CV">Download CV</a>
     </div>
-</section>
+  </section>
+
+  <!-- Section Services -->
+  <section id="services">
+    <h4>What I did ?</h4>
+    <h2>Service</h2>
+
+    <div class="s-container">
+      <!-- Cartes de services -->
+      <div class="services adip">
+        <img src="public/images/pencil-case.svg" alt="">
+        <p>Adipisicing</p>
+      </div>
+
+      <div class="services">
+        <img src="public/images/responsive.svg" alt="">
+        <p>Sapiente</p>
+      </div>
+
+      <div class="services">
+        <img src="public/images/toolbox.svg" alt="">
+        <p>Placeat</p>
+      </div>
+
+      <div class="services">
+        <img src="public/images/analytics.svg" alt="">
+        <p>lusto</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Portfolio -->
+  <section id="portfolio">
+    <div class="portfoliotitle">
+      <span class="sp">What i did ?</span>
+      <h2 class="soustitre">Portfolio</h2>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- Éléments de portfolio avec overlay -->
+      <div class="portfolio-item">
+        <img src="public/images/folio-1.jpg" alt="Portfolio image 1">
+        <div class="portfolio-overlay">
+          <h3>Web Designing</h3>
+          <p>Category: Web Templates</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="public/images/folio-2.jpg" alt="Portfolio image 2">
+        <div class="portfolio-overlay">
+          <h3>Web Designing</h3>
+          <p>Category: Web Templates</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="public/images/folio-3.jpg" alt="Portfolio image 3">
+        <div class="portfolio-overlay">
+          <h3>Web Designing</h3>
+          <p>Category: Web Templates</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Pricing -->
+  <section class="Pricing">
+    <p id="p1Pricing">How Much I Charge?</p>
+    <p id="p2Pricing">My Pricing</p>
+
+    <div>
+      <!-- Carte Free -->
+      <div id="Free">
+        <img src="public/images/scooter.svg" alt="scooter">
+        <h4>Free</h4>
+        <p>accusamus reprehenderit...</p>
+        <span id="X">✕<br>✕</span>
+        <h3>$0.00/Month</h3>
+        <button>Subscribe</button>
+      </div>
+
+      <!-- Carte Basic -->
+      <div id="Basic">
+        <img src="public/images/shipped.svg" alt="shipped">
+        <h4>Basic</h4>
+        <p>accusamus reprehenderit...</p>
+        <span id="X">✕</span>
+        <h3>$9.99/Month</h3>
+        <button>Subscribe</button>
+      </div>
+
+      <!-- Carte Premium -->
+      <div id="Premium">
+        <img id="fusé" src="public/images/startup.svg" alt="fusé">
+        <h4>Premium</h4>
+        <p>accusamus reprehenderit...</p>
+        <h3>$99.9/Month</h3>
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Hire Me -->
+  <section class="Hire">
+    <div>
+      <h5>Want to work with me?</h5>
+      <p>Always feel Free to Contact &amp; Hire me</p>
+    </div>
+    <button>Hire me</button>
+  </section>
+
+  <!-- Section Testimonial -->
+  <section class="Testimonial">
+    <p>What Think Client About Me?</p>
+    <h3>Testimonial</h3>
+
+    <div>
+      <div>
+        <img src="public/images/avatar2.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet...<br><br><span>Emily Reb</span></p>
+      </div>
+
+      <div>
+        <img src="public/images/avatar3.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet...<br><br><span>Emily Reb</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Blog -->
+  <section class="Blog">
+    <p>Recent Posts?</p>
+    <h3>Blog</h3>
+
+    <div id="BlogDivs">
+      <!-- Article 1 -->
+      <div id="BlogDiv1">
+        <img src="public/images/img-1.jpg" alt="img peinture">
+        <div>
+          <p>
+            <span id="titreBlog">Consectetur adipisicing elit</span><br><br>
+            <span id="spangrey">By: Admin</span>
+            <span id="coeur"><i class="fa-regular fa-heart"></i></span>
+            <span id="spangrey"> 234 </span>
+            <i class="fa-regular fa-message"></i>
+            <span id="spangrey"> 123 </span><br><br>
+            Lorem ipsum dolor sit amet...<br><br>
+            <span id="SpanBlog">Necessitatibus nihil impedit!</span><br><br>
+            Magnam in repellat enim...<br>
+            <span id="ReadSpan">Read more >></span>
+            <i class="fa-solid fa-angles-right"></i>
+          </p>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div id="BlogDiv2">
+        <img src="public/images/img-2.jpg" alt="img homme sur ordinateur">
+        <div>
+          <p>
+            <span id="titreBlog">Explicabo illo</span><br><br>
+            <span id="spangrey">By: Admin</span>
+            <span id="coeur"><i class="fa-regular fa-heart"></i></span>
+            <span id="spangrey"> 456 </span>
+            <i class="fa-regular fa-message"></i>
+            <span id="spangrey"> 264 </span><br><br>
+            Lorem ipsum dolor sit amet...<br><br>
+            <span id="ReadSpan">Read more >></span>
+            <i class="fa-solid fa-angles-right"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact">
+    <h4>How can you communicate?</h4>
+    <h2>Contact Me</h2>
+
+    <!-- Formulaire de contact -->
+    <form action="">
+      <textarea cols="80" rows="8" name="msg" class="msg" placeholder="Write Something"></textarea>
+    </form>
+
+    <!-- Bouton d'envoi -->
+    <button class="message">Send Message</button>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <p class="copy">Copyright 2022 ©DevCRUD</p>
+
+    <!-- Réseaux sociaux -->
+    <div class="reso-container">
+      <div class="reso"></div>
+      <div class="reso"><a href="https://www.facebook.com/"><i class="logo fa-brands fa-facebook-f"></i></a></div>
+      <div class="reso"><a href="https://x.com/"><i class="logo fa-brands fa-twitter"></i></a></div>
+      <div class="reso"><a href="https://www.google.com/"><i class="logo fa-brands fa-google-plus-g"></i></a></div>
+      <div class="reso"><a href="https://fr.pinterest.com/"><i class="logo fa-brands fa-pinterest"></i></a></div>
+      <div class="reso"><a href="https://www.instagram.com/"><i class="logo fa-brands fa-instagram"></i></a></div>
+      <div class="reso"><a href="https://store.google.com/fr/product/chromecast_google_tv"><i class="logo fa-brands fa-chromecast"></i></a></div>
+    </div>
+  </footer>
+
 </body>
 </html>
